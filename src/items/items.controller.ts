@@ -30,6 +30,11 @@ export class ItemsController {
     return this.itemsService.findOne(+id);
   }
 
+  @Get('author/:authorId')
+  findByAuthorId(@Param('authorId') authorId: string) {
+    return this.itemsService.findByAuthorId(+authorId);
+  }
+
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateItemDto: UpdateItemDto) {
     return this.itemsService.update(+id, updateItemDto);
