@@ -9,11 +9,11 @@ async function bootstrap() {
   // configure swagger
   const config = new DocumentBuilder()
     .setTitle('CRUD Items API')
-    .setDescription('API para o meu CRUD de itens')
+    .setDescription('CRUD Items API made with NestJS and Prisma by github.com/pedroleonez')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('swagger', app, document);
   
   // configure global validation pipe
   app.useGlobalPipes(
